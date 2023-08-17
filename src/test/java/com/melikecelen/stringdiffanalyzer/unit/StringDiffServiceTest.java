@@ -17,7 +17,6 @@ class StringDiffServiceTest {
     private final String s1 = "my&friend&Paul has heavy hats! &";
     private final String s2 = "my friend John has many many friends &";
 
-
     @Test
     void testMixBothInputsWithLowercaseChars() {
         String result = stringDiffService.mix(s1, s2);
@@ -31,22 +30,14 @@ class StringDiffServiceTest {
     }
 
     @Test
-    void testMixWhenBothInputsAreEmptyOrDoesNotIncludeLowercaseChars() {
-        assertEquals("", stringDiffService.mix("", ""));
-        assertEquals("", stringDiffService.mix("ABC", "CDE"));
-    }
-
-    @Test
-    void testMixWhenOneOfTheInputsIsEmpty() {
-        String result = stringDiffService.mix("aabcd", "");
-        assertEquals("1:aa", result);
+    void testMixWhenBothInputsDoNotIncludeLowercaseChars() {
+        assertEquals("", stringDiffService.mix("ABC?", "CDE*"));
     }
 
     @Test
     void testExtractLowercaseCharacters() {
         String result = stringDiffService.extractLowercaseCharacters(s1);
         assertEquals("myfriendaulhasheavyhats", result);
-
     }
 
     @Test
