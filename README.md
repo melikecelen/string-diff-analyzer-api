@@ -8,6 +8,8 @@
 * **Swagger page**: http://localhost:8080/swagger-ui/index.html
 * **Gradle version**: 8.2.1
 * **Java version**: 17
+* **Spring Boot version**: 3.1.2
+
 ### Explanation
 Given two strings s1 and s2, we want to visualise how different the two strings are. We will only
 take into account the lowercase letters (a to z). First let us count the frequency of each lowercase
