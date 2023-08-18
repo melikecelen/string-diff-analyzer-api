@@ -7,9 +7,9 @@ import lombok.Getter;
 @Getter
 public class CharacterResource {
 
-    PrefixEnum prefix;
-    Character character;
-    int count;
+    private PrefixEnum prefix;
+    private Character character;
+    private int count;
 
     @Override
     public String toString() {
